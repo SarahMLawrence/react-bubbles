@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 import Login from "./components/Login";
 import BubblePage from "./components/BubblePage";
+import PrivateRoute from "./components/PrivateRoute";
 import "./styles.scss";
 
 class App extends React.Component {
@@ -21,7 +22,7 @@ class App extends React.Component {
                 <h3>Login</h3>
               </Link>
             </div>
-            <div class="modal-header">
+            <div >
               <Switch>
                 <Route path="/login" component={Login} />
                 <PrivateRoute
@@ -37,3 +38,6 @@ class App extends React.Component {
     );
   }
 }
+
+
+export default App;
