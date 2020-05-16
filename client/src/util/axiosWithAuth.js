@@ -1,3 +1,6 @@
+//==========//
+//  IMPORTS //
+//==========//
 import axios from "axios";
 
 export const AxiosWithAuth = () => {
