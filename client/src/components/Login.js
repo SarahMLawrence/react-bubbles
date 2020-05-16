@@ -2,7 +2,7 @@
 //  IMPORTS //
 //==========//
 import React from "react";
-import axiosWithAuth from '../util/axiosWithAuth';
+import {AxiosWithAuth} from '../util/AxiosWithAuth';
 
 class Login extends React.Component {
   constructor(){
@@ -27,7 +27,7 @@ class Login extends React.Component {
 
   login = (e) => {
     e.preventDefault();
-    axiosWithAuth()
+    AxiosWithAuth()
     .post('/api/login', this.state.credentials)
     .then((res) => {
       window.localStorage.setItem('token', res.data.payload);
@@ -57,7 +57,7 @@ class Login extends React.Component {
           onChange={this.handleChange}
           />
 
-          <button>Log In</button>
+          <button onClick={this.login}>Log In</button>
         </form>
       </div>
     )

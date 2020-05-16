@@ -21,10 +21,15 @@ class App extends React.Component {
               <Link to="/login">
                 <h3>Login</h3>
               </Link>
+              <Link to="/bubble-page">
+                <h3>Bubbles</h3>
+              </Link>
+               <Route path="/" component={Login} />
+              
             </div>
             <div >
               <Switch>
-                <Route path="/login" component={Login} />
+               
                 <PrivateRoute
                   exact
                   path="/bubble-page"
